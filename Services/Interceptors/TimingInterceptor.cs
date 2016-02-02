@@ -37,8 +37,9 @@ namespace Services.Interceptors
             //You could discover these and determine what to do with it.
             var parameters = invocationInfo.Arguments;
 
-            Console.WriteLine();
             //Add a logger and log this data so we know what is taking so long.
+            Console.WriteLine($"The Method {method.Name} was called on Class {target.GetType().FullName} with the following params {string.Join(",", parameters)} in {time} ms.");
+            Console.WriteLine();
         }
     }
 }

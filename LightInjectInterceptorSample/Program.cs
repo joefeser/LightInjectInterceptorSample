@@ -19,7 +19,11 @@ namespace LightInjectInterceptorSample
             var service = container.GetInstance<IExampleService>();
             try
             {
+                Console.WriteLine("WorkingCall");
                 service.WorkingCall("test param", 2300);
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("BlowsUp");
                 service.BlowsUp("test param 99", 22);
             }
             catch (Exception)

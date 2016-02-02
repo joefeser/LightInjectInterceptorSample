@@ -33,6 +33,9 @@ namespace Services.Interceptors
             var parameters = invocationInfo.Arguments;
             //Add a logger and log this data so we know what is taking so long.
             //because you have the error, you now have all of the data that was passed to 
+
+            Console.WriteLine($"The Method {method.Name} fauled on Class {target.GetType().FullName} with the following params {string.Join(",", parameters)} because {ex.GetType().FullName}. {ex.ToString()}");
+            Console.WriteLine();
         }
     }
 }
