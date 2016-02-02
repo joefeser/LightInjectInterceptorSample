@@ -36,6 +36,8 @@ namespace Services.Interceptors
             var target = invocationInfo.Proxy.Target;
             //You could discover these and determine what to do with it.
             var parameters = invocationInfo.Arguments;
+
+            Console.WriteLine();
             //Add a logger and log this data so we know what is taking so long.
         }
     }
